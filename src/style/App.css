@@ -1,0 +1,262 @@
+.App {
+  /* display: flex;
+  display: -webkit-flex; */
+}
+.header {
+  height: 35px;
+  background: #666;
+  color: #fff;
+  display: flex;
+}
+.orderInfo {
+  line-height: 35px;
+  width: calc(100% - 30px);
+  text-align: center;
+  display: flex;
+  font-size: 16px;
+}
+.orderInfo span {
+  flex: 1 1 ;
+}
+.header .returnButton {
+  line-height: 38px;
+  max-width: 40px;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.topMenuItem {
+  line-height: 40px;
+  height: 40px;
+  padding: 0 13px;
+  font-size: 20px;
+  /* transform: rotate(90deg); */
+  transition: .38s;
+  transform-origin: 50% 50%;
+}
+.main {
+  display: flex;
+  display: -webkit-flex;
+}
+.DataCenter {
+  width:320px;
+  background: #000;
+  border-left: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  min-width: 320px;
+}
+
+.DataManger {
+  background-image: -webkit-linear-gradient(top, #1b1b1b, #353535);
+  height: 40px;
+}
+
+.DataCenter .ant-card-body {
+  padding: 8px 20px;
+  background: #000;
+}
+
+.dataButton {
+    font-size: 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    width: 61px;
+    border-radius: 5px;
+    height: 22px;
+    padding: 0 4px;
+    float: right;
+    margin: 9px 14px;
+}
+
+.dataButton:nth-child(4){
+  margin-right: 0;
+}
+.dataButton.ant-btn:focus {
+  color: #000;
+}
+.dataButton.ant-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.addData .ant-form-item-label {
+  /* line-height: 28px; */
+}
+.addData .ant-form-item-label > label {
+  color: #fff;
+}
+
+.addData .ant-modal-footer .ant-btn {
+  display: none;
+}
+.addData .ant-modal-footer .ant-btn-primary {
+    display: inline-block;
+}
+.addData .ant-form-item {
+  margin-bottom: 16px;
+}
+.addData .ant-form-item .ant-select-selection,
+.addData .ant-form-item .ant-input {
+  height: 28px;
+  border-radius: 0;
+}
+.addData .ant-form-item  .ant-form-item-children textarea {
+  height: 56px;
+}
+.addData .ant-btn {
+  border-radius: 2px;
+  min-width: 116px;
+}
+
+.rootMenu {
+  height: 240px;
+  overflow: scroll;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  padding: 12px 0;
+  margin-bottom: 0px;
+}
+
+.rootMenu li {
+  color: #fff;
+  padding: 5px 20px;
+}
+
+.rootMenu li:hover {
+  cursor: pointer;
+}
+.rootMenu .active {
+  background: rgb(65, 199, 219)!important;
+}
+
+.dataMessage {
+  background: #fff;
+}
+.dataMessageContent {
+  background: #000;
+  margin-right: 16px;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+.dataMessage span{
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.DataMenu .ant-tree,
+.DataMenu .ant-tree  li .ant-tree-node-content-wrapper {
+  color: #fff;
+}
+.DataMenu .ant-tree li span.ant-tree-iconEle {
+  margin-right: 5px;
+}
+.DataMenu .ant-tree li span.ant-tree-switcher.ant-tree-switcher_open .ant-tree-switcher-icon,
+.DataMenu .ant-tree li span.ant-tree-switcher.ant-tree-switcher_open .ant-select-switcher-icon,
+.DataMenu .ant-tree li span.ant-tree-switcher.ant-tree-switcher_close .ant-tree-switcher-icon,
+.DataMenu .ant-tree li span.ant-tree-switcher.ant-tree-switcher_close .ant-select-switcher-icon{
+  font-size: 16px;
+}
+.DataMenu .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper > span .anticon,
+.DataMenu .ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper > span .anticon{
+  font-size: 20px;
+}
+.DataMenu .ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper::before,
+.DataMenu .ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper::before,
+.DataMenu .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover::before,
+.DataMenu .ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover::before {
+  background-color:rgb(65, 199, 219);
+}
+/* Tree
+.DataMenu .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected,
+.DataMenu .ant-tree li .ant-tree-node-content-wrapper:hover {
+    background-color:rgb(65, 199, 219)!important;
+}
+.DataMenu .ant-tree-icon__close {
+  background: url('../images/dataManage/Folder22.png');
+  background-repeat: no-repeat;
+}
+
+.DataMenu .ant-tree-icon__docu {
+  background: url('../images/dataManage/file.png');
+  background-repeat: no-repeat;
+}
+
+.DataMenu .ant-tree-icon__open {
+  background: url('../images/dataManage/folderOpen.png');
+  background-repeat: no-repeat;
+}
+
+.DataMenu .ant-tree li span.ant-tree-iconEle {
+  margin-right: 5px;
+}
+
+
+.DataMenu .ant-tree li .ant-tree-node-content-wrapper{
+  height:auto;
+}
+
+.DataMenu .ant-tree-node-content-wrapper{
+  white-space: normal;
+  max-width: 100%;
+} */
+
+.DataMenu {
+  position: relative;
+  height: calc(100vh - 400px);
+  overflow: scroll;
+  padding: 12px;
+  border-top: 2px solid #aaa;
+}
+.rightMenu {
+  background: #fff;
+  width: 152px;
+  border-radius: 5px;
+  padding:8px 0;
+  box-shadow: 0px 0px 10px #fff;
+  z-index: 2;
+}
+
+.rightMenuItem {
+  padding: 4px 15px;
+  text-align: left;
+}
+.rightMenuItem:hover {
+  background: rgba(222, 220, 220, 0.5);
+  cursor: pointer;
+}
+
+.rightMenuItemText {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+/* ycm列表 */
+.openYcm .ant-divider-horizontal.ant-divider-with-text-left .ant-divider-inner-text,
+.openYcm .ant-radio-wrapper {
+  color: #fff;
+}
+.confirm {
+  top: 200px;
+}
+.confirm .ant-modal-confirm-body .ant-modal-confirm-title,
+.confirm .ant-modal-confirm-body .ant-modal-confirm-content{
+  color: #fff;
+  font-size: 14px;
+}
+.confirm .ant-modal-confirm-body > .anticon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.confirm .ant-btn {
+  min-width: 72px;
+}
+.ant-modal-confirm .ant-modal-confirm-btns {
+  min-width: 218px!important;
+}

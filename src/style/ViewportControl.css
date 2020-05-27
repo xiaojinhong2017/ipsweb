@@ -1,0 +1,31 @@
+.viewportContainer,
+.viewportContainerHide {
+  width: 102px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  top: 8px;
+  z-index: 6;
+}
+
+.viewportContainerHide {
+  display: none;
+}
+.viewportContainer  li:hover {
+  background: rgb(65, 199, 219);
+}
+/* saveProxy  */
+.saveProxy .viewportContainer {
+  width: 158px;
+  top: 8px;
+  right:86px;
+}
+.saveProxy .viewportContainer  li{
+  padding: 4px 8px;
+}

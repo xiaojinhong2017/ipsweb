@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>旭东云手术规划平台</title>
+  </head>
+  <body>
+    <form id='add'>
+        <input type="text" name='book'></input>
+        <input type="file" name='source'></input>
+        <input type="submit" value="提交"/>
+    </form>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="yorktal.js"></script>
+    <script type="text/javascript">
+      $('#add').submit(function(){
+        console.log($('#add')[0]);
+                  var data = new FormData($('#add')[0]);
+                  console.log(data);
+                  $.ajax({
+                      url: "http://39.108.97.209:8080/dmitweb/upload?userId=&name=test&ossType=1&ossObjectId=3354&orderNo=20200330-ZSC0001-0007&orderId=590",
+                      type: 'POST',
+                      data: data,
+                      cache: false,
+                      async: true,
+                      contentType: false,
+                      processData: false,
+                      success:function(data){
+                          //alert(data);
+                          alert("UploadFile Success");
+                      }
+                  });
+                  return false;
+              });
+    </script>
+  </body>
+</html>

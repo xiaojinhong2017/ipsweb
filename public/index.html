@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>旭东云手术规划平台</title>
+  </head>
+  <body>
+    <div id="root">
+    <style>
+      *, :after, :before {
+       -webkit-box-sizing: content-box;
+       box-sizing: content-box;
+      }
+      .base {
+        height: 9em;
+        left: 50%;
+        margin: -7.5em;
+        padding: 3em;
+        position: absolute;
+        top: 50%;
+        width: 9em;
+        transform: rotateX(45deg) rotateZ(45deg);
+        transform-style: preserve-3d;
+      }
+
+      .cube,
+      .cube:after,
+      .cube:before {
+        content: '';
+        float: left;
+        height: 3em;
+        position: absolute;
+        width: 3em;
+      }
+
+      /* Top */
+      .cube {
+        background-color: #05afd1;
+        position: relative;
+        transform: translateZ(3em);
+        transform-style: preserve-3d;
+        transition: .25s;
+        box-shadow: 13em 13em 1.5em rgba(0, 0, 0, 0.1);
+        animation: anim 1s infinite;
+      }
+
+      .cube:after {
+        background-color: #049dbc;
+        transform: rotateX(-90deg) translateY(3em);
+        transform-origin: 100% 100%;
+      }
+
+      .cube:before {
+        background-color: #048ca7;
+        transform: rotateY(90deg) translateX(3em);
+        transform-origin: 100% 0;
+      }
+
+      .cube:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+
+      .cube:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+
+      .cube:nth-child(3) {
+        animation-delay: 0.15s;
+      }
+
+      .cube:nth-child(4) {
+        animation-delay: 0.2s;
+      }
+
+      .cube:nth-child(5) {
+        animation-delay: 0.25s;
+      }
+
+      .cube:nth-child(6) {
+        animation-delay: 0.3s;
+      }
+
+      .cube:nth-child(7) {
+        animation-delay: 0.35s;
+      }
+
+      .cube:nth-child(8) {
+        animation-delay: 0.4s;
+      }
+
+      .cube:nth-child(9) {
+        animation-delay: 0.45s;
+      }
+
+      @keyframes anim {
+        50% {
+          transform: translateZ(0.5em);
+        }
+      }
+    </style>
+    <div class='base'>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+      <div class='cube'></div>
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="yorktal.js"></script>
+    <script type="text/javascript">
+    function getUrlParam(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+      var r = window.location.search.substr(1).match(reg); //匹配目标参数
+      if (r != null)
+      // return unescape(r[2]);
+      return decodeURI(r[2]);
+      return null; //返回参数值
+    }
+    var iframe = document.createElement('iframe')
+  　　document.body.appendChild(iframe)
+  　　window.console = iframe.contentWindow.console;
+    var ipconfig = '192.168.1.177:8765';
+  	var url = '192.168.1.177:8080';
+    var serverUrl = '192.168.1.177:9002';
+    var requestUrl = "http://192.168.1.177:8080";
+    var orderNo='20190703-BJ0064-0002';
+    var orderId='225';
+    var email='user01@163.com';
+    var hospitalName='北京医科大学附属医院';
+    var doctorName='李三';
+    var patientName='赵四';
+    var apply='王晓旺';
+    // var orderNo=getUrlParam('orderNo');
+    // var orderId=getUrlParam('orderId');
+    // var email=getUrlParam('email');
+    // var hospitalName=getUrlParam('hospitalName');
+    // var doctorName=getUrlParam('doctorName');
+    // var patientName=getUrlParam('patientName');
+    // var apply=getUrlParam('apply');
+    // var ipconfig = '192.168.1.188:8848';
+    // // var ycmfile = "ycm-data/肝占位案例2/肝占位案例2.ycm";
+    // var dicomDirectory = "20170906-JS0266-0002-old/data";
+    // // var dicomDirectory = "ycm-data/肝占位案例2/PV/IM00010.dcm";
+    // var serverUrl = '192.168.1.188:9002';
+    // var requestUrl = "http://192.168.1.177:8080";
+     //   (function () {
+     //     var dataMatch = window.location.href.match(/\#([\\|\%][a-z|0-9]*)*/);
+     //     if (!dataMatch) {
+     //       alert('错误的请求');
+     //       window.history.back(-1);
+     //     }
+     //     var data = dataMatch[0].substr(1);
+     //     if (window.history.pushState) window.history.replaceState(null, null, 'index.html');
+     //     var hexToDec = function (str) {
+     //       str = str.replace(/\\/g, "%");
+     //       return unescape(str);
+     //     }
+     //     var dataArray = hexToDec(data).split(' ');
+     //     var fileDir =  dataArray[3].split(".")[0];
+     //     var fileId = dataArray[2];
+     //     var type = dataArray[4] || '';
+     //
+     //     var login = function () {
+     //       $.ajax({
+     //         url: `http://${url}/dmitweb/litefile/findPath?orderno=${fileId}&name=${fileDir}`,
+     //         type: "get",
+     //         async:false,
+     //         contentType: "application/json; charset=utf-8",
+     //         success: function (data) {
+     //           if (data.baseDTO.responseCode == 0) {
+     //             ycmfile = data.baseDTO.code.slice(12)
+     //           } else {
+     //             alert('身份信息已过期');
+     //             window.history.back(-1);
+     //             return null;
+     //           }
+     //         },
+     //         error: function (XmlHttpRequest, textStatus, errorThrown) {
+     //           if (XmlHttpRequest.status == 400) {
+     //             alert("错误的请求");
+     //           } else if (XmlHttpRequest.status == 404) {
+     //             alert("未找到");
+     //           } else if (XmlHttpRequest.status == 500) {
+     //             alert("内部服务器错误");
+     //           } else {
+     //             alert("错误状态码：" + XmlHttpRequest.status);
+     //           }
+     //           window.history.back(-1);
+     //         }
+     //       });
+     //     };
+     //     if (dataArray[0] === '') {
+     //       alert('身份信息已过期');
+     //       window.history.back(-1);
+     //     } else {
+     //       login();
+     //     }
+     // })();
+    </script>
+  </body>
+</html>

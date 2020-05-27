@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.container > * {
+    flex: 1;
+}
+
+.pipelineContainer {
+    box-sizing: border-box;
+    /*min-height: 25vh;*/
+    height: 100%;
+    margin: 0;
+
+    overflow-x: scroll;
+}
+
+.proxyEditorContainer {
+    position: absolute;
+    width: 100%;
+    top: 25vh;
+    bottom: 0;
+}
+
+.colorBy {
+    padding: 5px;
+}

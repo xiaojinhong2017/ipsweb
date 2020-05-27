@@ -1,0 +1,184 @@
+.maincontent{
+  display: block;
+  background:#252525;
+  border:2px solid #aaa;
+  padding: 0 20px;
+  overflow: auto;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 640px;
+
+}
+.dataOperation {
+  display: block;
+  margin-top: 20px;
+}
+.dataOperationBtn {
+  display: inline-block;
+  padding: 10px 6px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right:10px;
+}
+.dataOperationBtn:hover {
+  background:  #000;
+}
+.property {
+  display: flex;
+  margin-top: 20px;
+}
+.property .dataPropertyImg {
+  margin: 20px;
+  /* border: 2px solid; */
+  order: 2;
+  width: 250px;
+  height: 700px;
+  overflow: auto;
+}
+.property .dataPropertyImg::-webkit-scrollbar {
+  display: none;
+}
+.property .dataPropertyImg img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.dataPropertyImg .termImgTitle {
+  position: relative;
+}
+.dataPropertyImg .termImgTitle span{
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  color: #fff;
+}
+
+.property .dataProperty {
+  flex: 3;
+}
+.blackTable .archivesTable {
+  height: 178px;
+  background: #171616;
+}
+.blackTable .inspectTable {
+  height: 188px;
+  background: #171616;
+}
+.blackTable .termTable {
+  height: 268px;
+  background: #171616;
+}
+.blackTable .ant-table-wrapper {
+  border: 1px solid #2d2d2d;
+  /* margin-bottom: 30px; */
+}
+.blackTable .ant-table-bordered .ant-table-thead > tr > th, .ant-table-bordered .ant-table-tbody > tr > td{
+  color: #fff;
+  background: #171616;
+  border-right: 1px solid #484747;
+}
+.blackTable .ant-table-thead > tr > th,
+.blackTable .ant-table-tbody > tr > td {
+  color: #fff;
+  border-bottom: 1px dotted #484747;
+  padding: 8px;
+}
+.blackTable .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body,
+.blackTable .ant-table-header {
+  background: #171616;
+}
+.blackTable .ant-table-bordered .ant-table-header > table, .ant-table-bordered .ant-table-body > table, .ant-table-bordered .ant-table-fixed-left table, .ant-table-bordered .ant-table-fixed-right table,
+.blackTable .ant-table-bordered.ant-table-fixed-header .ant-table-scroll .ant-table-header::-webkit-scrollbar {
+    border: none;
+}
+
+/* .blackTable .ant-table-thead > tr:hover.ant-table-row-selected > td, .ant-table-tbody > tr:hover.ant-table-row-selected > td {
+  background: #333;
+} */
+.blackTable .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+.blackTable .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+.blackTable .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
+.blackTable .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+  /* background: #1e2a33; */
+    background: #0a2438;
+}
+
+.blackTable .ant-table-thead > tr:first-child > th:last-child,
+.blackTable .ant-table-thead > tr:first-child > th:first-child {
+  border-radius: 0;
+}
+.blackTable .ant-table-tbody > tr.ant-table-row-selected td {
+  background: #1e2a33;
+  /* background: #0a2438; */
+
+}
+/* .blackTable .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+  padding: 8px;
+} */
+.blackTable h4 {
+  color: #fff;
+}
+
+.blackTable .ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner {
+  border-color: #505356;
+}
+.blackTable .ant-radio-inner::after,
+.blackTable .ant-radio-checked::after {
+  background-color: #505356;
+}
+
+.blackTable .ant-radio-checked .ant-radio-inner {
+  border-color: #505356;
+}
+
+.blackTable .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #505356;
+    border-color: #fff;
+}
+.blackTable .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+  background-color: #505356;
+}
+/* .blackTable .ant-checkbox-checked::after {
+  border: 1px solid #505356;
+} */
+
+.propertyModal .ant-modal-content{
+  width: 600px;
+}
+.propertyModal .ant-btn {
+  display: none;
+}
+.modalStyle .ant-btn-primary {
+    display: inline-block;
+}
+
+
+.propertyModal .ant-slider{
+  margin-bottom: 20px;
+  height: 20px;
+}
+.propertyModal .ant-slider-step {
+  height: 20px;
+  background: linear-gradient(45deg,  rgba(144, 139, 139, .5) 0, rgba(144, 139, 139, .5) 25%, transparent 25%, transparent 50%,rgba(144, 139, 139, .5) 50%, rgba(144, 139, 139, .5) 75%, transparent 75%, transparent);
+  background-size:6px 6px;
+}
+.propertyModal .ant-slider-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  margin-top: 0;
+  opacity: .7;
+  background: #666;
+}
+.propertyModal .ant-slider-track,
+.propertyModal .ant-slider-rail{
+  height: 0px;
+}
+.propertyModal .ant-slider-handle {
+  border:2px solid #fff;
+}

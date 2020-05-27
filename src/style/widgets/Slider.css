@@ -1,0 +1,46 @@
+.lineDiv1 {
+  height: 10px;
+    width: calc(100% - 110px);
+    position: absolute;
+    bottom: 10px;
+    background-color: #4c4a4a;
+    z-index: 1000;
+    left: 10px;
+   opacity: 0;
+}
+
+.lineDiv1:hover {
+  opacity: 1;
+}
+
+.lineDiv1 .minDiv1 {
+  width: 80px;
+    height: 10px;
+    background: #2572af;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+
+.ball1 {
+    width: 20px;
+    height: 20px;
+    background: #2572af;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -9px;
+}
+
+.ball2 {
+    width: 20px;
+    height: 20px;
+    background: #2572af;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: 70px;
+}

@@ -1,0 +1,65 @@
+// <div className={style.linePart} >
+//   三维种子点：
+//   <div
+//     className={!this.state.seedChoose ? style.seedButton : style.seedButtonActive}
+//     onClick={this.toggleSeedChoose}
+//   />
+// </div>
+
+<div className={style.radioPart} >
+  <input type="radio" name="clear" id="clear" key="clear" onClick={this.toggleClear} checked={this.state.clear} />
+  <label htmlFor="clear" >清除</label>
+</div>
+
+{
+  segmentation.map((item, idx) =>
+    idx <= 6 &&
+      <div className={style.radioPart} key={item.id}>
+        <input
+          type="radio"
+          name="basinAnalysisation"
+          id={`segmentation${item.id}`}
+          key={item.id}
+          data-type={item.id}
+          onClick={this.changeSegmentation}
+        />
+        <label htmlFor={`segmentation${item.id}`} key={`segmentation${item.id}`} >
+          {item.name}
+        </label>
+      </div>
+  )
+}
+{
+  segmentation.map((item, idx) =>
+    idx > 6 &&
+      <div className={style.radioPart} key={item.id}>
+        <input
+          type="radio"
+          name="basinAnalysisation"
+          id={`segmentation${item.id}`}
+          key={item.id}
+          data-type={item.id}
+          onClick={this.changeSegmentation}
+        />
+        <label htmlFor={`segmentation${item.id}`} key={`segmentation${item.id}`} >
+          {item.name}
+        </label>
+      </div>
+  )
+}
+
+
+
+const segmentation = [
+  { name: '肝段_Ⅱ', id: '0' },
+  { name: '肝段_Ⅲ', id: '1' },
+  { name: '肝段_Ⅳ', id: '2' },
+  { name: '肝段_Ⅴ', id: '3' },
+  { name: '肝段_Ⅵ', id: '4' },
+  { name: '肝段_Ⅶ', id: '5' },
+  { name: '肝段_Ⅷ', id: '6' },
+  { name: '肝段_Ⅸ', id: '7' },
+  { name: '肝段_Ⅹ', id: '8' },
+  { name: '肝段_Ⅺ', id: '9' },
+  { name: '肝段_Ⅻ', id: '10' },
+];

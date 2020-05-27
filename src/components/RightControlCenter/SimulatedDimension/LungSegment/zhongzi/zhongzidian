@@ -1,0 +1,51 @@
+
+  toggleSeedChoose() {
+    this.setState({ seedChoose: !this.state.seedChoose });
+  },
+
+    changeSegmentation(e) {
+      this.setState({ type: e.target.getAttribute('data-type') });
+    },
+
+  toggleClear() {
+    this.setState({ clear: !this.state.clear });
+  },
+
+<div className='rowPart' >
+  {
+    segmentation.map(item =>
+      <div className={style.radioPart} >
+        <input
+          type="radio"
+          name="lungSegmentation"
+          id={`segmentation${item.id}`}
+          key={item.id}
+          data-type={item.id}
+          onClick={this.changeSegmentation}
+        />
+        <label htmlFor={`segmentation${item.id}`} key={`segmentation${item.id}`} >
+          {item.name}
+        </label>
+      </div>
+    )
+  }
+</div>
+<div className='rowPart' style={{ margin: '30px 0' }} >
+  <div className={style.radioPart} >
+    <input type="radio" name="clear" id="clear" onClick={this.toggleClear} checked={this.state.clear} />
+    <label htmlFor="clear" >清除</label>
+  </div>
+</div>
+
+const segmentation = [
+  { name: '肺段_1', id: '1' },
+  { name: '肺段_2', id: '2' },
+  { name: '肺段_3', id: '3' },
+  { name: '肺段_4', id: '4' },
+  { name: '肺段_5', id: '5' },
+  { name: '肺段_6', id: '6' },
+  { name: '肺段_7', id: '7' },
+  { name: '肺段_8', id: '8' },
+  { name: '肺段_9', id: '9' },
+  { name: '肺段_10', id: '10' },
+];

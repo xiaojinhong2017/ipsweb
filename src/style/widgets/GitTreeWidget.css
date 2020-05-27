@@ -1,0 +1,517 @@
+.cursor {
+    cursor: pointer;
+}
+
+.regularText {
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.regularText::selection {
+    background-color: transparent;
+}
+
+.volumeText {
+    text-anchor: end;
+    user-select: none;
+}
+
+.iconText {
+    font-family: FontAwesome;
+    cursor: pointer;
+}
+
+.colorSetting {
+    position: absolute;
+    /*display: none;*/
+    width: 154px;
+    height: 24px;
+    border-radius: 7px;
+    padding: 3px 4px;
+    background-color: #fff;
+}
+
+.colorSetting:before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 10px;
+    display: block;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 9px solid #fff;
+}
+
+.colorSetting .transparence,
+.colorSetting .color {
+    width: 77px;
+    display: flex;
+    float: left;
+    position: relative;
+}
+
+.colorSetting .color span {
+    margin: 0!important;
+}
+
+/* .colorSetting .color svg {
+    margin-top: -12px;
+} */
+
+.colorSetting input {
+    height: 3px;
+    width: 48px;
+    border: none;
+    margin-left: 7px;
+    position: relative;
+    top: -4px;
+}
+
+.colorLabel {
+    width: 48px;
+    height: 18px;
+    margin-left: 7px;
+    position: relative;
+    top: 2px;
+    border: 1px solid #aaa;
+}
+
+.svg {
+    position: relative;
+    top: 3px;
+}
+
+.inputCell {
+    position: relative;
+}
+
+.inputValue {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    text-align: center;
+    margin-left: -10px;
+}
+
+.contextMenuBox {
+    position: fixed;
+    z-index: 99;
+    width: 140px;
+}
+
+.contextMenu {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    background-color: #eee;
+    user-select: none;
+}
+
+.contextMenu li {
+    height: 22px;
+    line-height: 22px;
+    width: 100%;
+    padding-left: 30px;
+    list-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.contextMenu li:hover {
+    background-color: #8bcef4;
+}
+
+.delete {
+    background: url('../../svg/Icons/delete.png') 7px 3px no-repeat;
+}
+
+.save {
+    background: url('../../svg/Icons/save.png') 7px 3px no-repeat;
+}
+
+.copy {
+    background: url('../../svg/Icons/copy.png') 7px 3px no-repeat;
+}
+
+.reName {
+    background: url('../../svg/Icons/modifyName.png') 7px 3px no-repeat;
+}
+
+.reOpacity {
+    background: url('../../svg/Icons/modifyTransparency.png') 7px 3px no-repeat;
+}
+
+.attribute {
+    background: url('../../svg/Icons/attribute.png') 7px 3px no-repeat;
+}
+
+.reBuild {
+    background: url('../../svg/Icons/reBuild.png') 7px 3px no-repeat;
+}
+
+.choose {
+    position: relative;
+}
+
+.delete:after,
+.choose:after {
+    content: "";
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 4px solid #333;
+    position: absolute;
+    top: 8px;
+    right: 6px;
+}
+
+.deleteContent {
+    width: 140px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 138px;
+}
+
+.deleteContent p {
+    background: url('../../svg/Icons/delete.png') 7px 3px no-repeat;
+}
+
+.chooseContent {
+    width: 120px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 138px;
+}
+
+.deleteContent p,
+.chooseContent p {
+    margin: 0;
+    padding: 0 0 0 30px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.deleteContent p:hover,
+.chooseContent p:hover {
+    background-color: #8bcef4;
+}
+
+.reBuildContent {
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4da6da;
+    position: fixed;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.titlePop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    height: 28px;
+    background-color: #35B4FF;
+    line-height: 28px;
+    font-size: 16px;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.titlePop span {
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contentW {
+    width: 100%;
+    height: auto;
+    padding-bottom: 7px;
+    background-color: #252525;
+    position: relative;
+    z-index: 2;
+}
+
+.linePart {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    color: #fff;
+    line-height: 25px;
+    text-align: left;
+}
+
+.linePart span {
+    display: inline-block;
+    width: 80px;
+}
+
+.linePart span input {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.linePart i {
+    font-style: normal;
+    width: 30px;
+    text-align: left;
+    display: inline-block;
+    padding-top:5px ;
+    box-sizing: border-box;
+}
+
+.linePart .feedBack {
+    font-style: normal;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #FF6A00;
+    line-height: 14px;
+}
+
+.linePart input[type = 'range'] {
+    width: 130px;
+}
+
+.linePart input[type=range]::-webkit-slider-thumb {
+    border: 1px solid #eee;
+}
+
+.linePart input[type=range]::-moz-range-thumb {
+    border: 1px solid #eee;
+}
+
+.linePart input[type=range]::-webkit-slider-runnable-track {
+    border: 1px solid #eee;
+}
+
+.linePart input[type=range]::-moz-range-track {
+    border: 1px solid #eee;
+}
+
+.linePart .btn {
+    float: right;
+    width: 60px;
+    height: 25px;
+    line-height: 23px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #2276a2;
+}
+
+.reNameContent {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4da6da;
+    position: fixed;
+}
+
+.reNameContent input[type=text] {
+    line-height: 16px;
+}
+
+.reNameContent .btns {
+    height: 35px;
+}
+
+.reNameContent .btns .btn {
+    float: left;
+    width: 40%;
+    margin: 5px 5%;
+    height: 25px;
+    padding: 0!important;
+    line-height: 23px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+    color: #fff;
+    text-align: center;
+}
+
+.reNameContent .btns .btn:hover {
+    background: #2276a2;
+}
+
+.propertyContent {
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4da6da;
+    position: fixed;
+}
+
+.propertyContent .linePart {
+    display: flex;
+    height: 24px;
+    line-height: 24px;
+    padding: 0
+}
+
+.propertyContent .linePart:nth-child(even) {
+    background: #565656;
+}
+
+.propertyContent .linePart:nth-child(odd) {
+    background: #252525;
+}
+
+.propertyContent .linePart span {
+    text-align: left;
+    flex: 1;
+    padding:0 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.label {
+    color: #ccc;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 25px;
+    background: #000;
+    position: relative;
+    cursor: pointer;
+}
+
+.label:before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: #fff;
+    left: 15px;
+    top: 9px;
+}
+
+.copyContent {
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4da6da;
+    position: fixed;
+}
+.copyContent .backZindex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.copyContent .backZindex .btn{
+    width: 60px;
+    box-sizing: border-box;
+    line-height: 13px;
+    flex-shrink: 0;
+}
+.copyContent .backZindex span{
+    width: 70px;
+    flex-shrink: 0;
+    text-align: start;
+}
+.copyContent .backZindex input{
+    flex:1!important;
+    margin-right:5px;
+}
+.copyContent .linePart {
+    line-height: 20px;
+}
+
+.copyContent .linePart .feedBack {
+    width: 80%;
+    padding:5px 0 0 0 ;
+    box-sizing: border-box;
+}
+
+.markContent {
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4da6da;
+    position: fixed;
+}
+
+.markContent .linePart {
+    line-height: 20px;
+}
+
+.markContent select {
+    width: 135px;
+}
+.markContent select option{
+    color: #000;
+}
+.markContent .btn{
+    line-height: 13px;
+    position: absolute;
+    top:9px;
+    
+    right: 5px;
+}
+
+.saveContent {
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4da6da;
+    position: fixed;
+}
+
+.saveContent .linePart {
+    line-height: 20px;
+}
+
+.saveContent input[type=text] {
+    width: 70%;
+    color: #000;
+}
+
+.saveContent .btns {
+    height: 35px;
+}
+
+.saveContent .btns .btn {
+    float: left;
+    width: 40%;
+    margin: 5px 5%;
+    height: 25px;
+    line-height: 23px;
+    padding: 0!important ;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+    color: #fff;
+    text-align: center;
+}
+
+.saveContent .btns .btn:hover {
+    background: #2276a2;
+}
+

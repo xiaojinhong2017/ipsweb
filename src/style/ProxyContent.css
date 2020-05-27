@@ -1,0 +1,204 @@
+/* .mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+} */
+
+.popupTitle {
+    padding: 5px 8px;
+    height: 36px;
+    background-color: #666;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.popupTitle span {
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popupContent {
+    width: 100%;
+    height: auto;
+    padding-bottom: 8px;
+    background-color: #454545;
+    position: relative;
+    z-index: 2;
+}
+
+.changeDataLineLeft,
+.popupLinePart,
+.popupLine,
+.changeDataLineRight{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    color: #fff;
+    line-height: 25px;
+    text-align: left;
+}
+.changeDataLineLeft {
+    width: 60%;
+}
+.changeDataLineRight {
+    width: 40%;
+}
+
+.changeDataLineLeft span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.changeDataLineLeft select {
+    display: block;
+    width: 80%;
+    color: #000;
+}
+
+.changeDataLineRight .btn {
+    width: 105px;
+    height: 25px;
+    line-height: 23px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.ProxyContent, .CloseProxy, .liversContent, .changeData, .propertyContent {
+    width: 350px;
+    height: auto;
+    max-height: 60%;
+    border-radius: 2px;
+    border: 1px solid #666;
+    position: fixed;
+    z-index: 1;
+    font-size: 14px;
+}
+.ProxyContent {
+  border: none;
+}
+.popupLinePart .feedBack {
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    width: 75%;
+    color: #FF6A00;
+    line-height: 0;
+}
+
+.popupLinePart {
+  width: 100%;
+}
+.popupLinePart span {
+    display: inline-block;
+    width: 90px;
+}
+.popupLine span {
+    display: inline-block;
+    width: 170px;
+}
+.popupLinePart input[type=text] {
+    line-height: 16px;
+    width: 70%;
+    color: #000;
+}
+/* .liversContent {
+    left: calc(50% - 175px);
+    top: 25%;
+    z-index: 50;
+}
+
+.liversContent i {
+    width: auto;
+    padding-left: 10px;
+}
+
+.CloseProxy .btns .btn {
+    width: 25%;
+    margin: 5px 4.16%;
+}
+
+.changeData .linePart span {
+    width: 90px;
+}
+
+.changeData .linePart select {
+    width: 100px;
+}
+
+.changeData .linePart .btn {
+    width: 60px;
+    font-size: 12px;
+}
+
+.propertyContent {
+    max-height: 65vh;
+    z-index: 3;
+    user-select: none;
+}
+
+.propertyContent .propertyContentPart{
+    max-height: calc(65vh - 68px);
+    overflow: scroll;
+    -webkit-overflow-scrolling: auto;
+    font-size: 12px;
+}
+
+.propertyContent .label{
+    color: #ccc;
+    padding-left: 15px;
+    text-align: left;
+    line-height: 20px;
+    background: #000;
+    position: relative;
+    cursor: pointer;
+}
+
+.propertyContent .label:before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: #fff;
+    left: 4px;
+    top: 7px;
+}
+
+.propertyContent .linePart {
+    display: flex;
+    height: 20px;
+    line-height: 20px;
+    padding: 0
+}
+
+.propertyContent .linePart:nth-child(even) {
+    background: #565656;
+}
+
+.propertyContent .linePart:nth-child(odd) {
+    background: #252525;
+}
+
+.propertyContent .linePart span {
+    text-align: left;
+    flex: 1;
+    padding:0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */

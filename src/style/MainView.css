@@ -1,0 +1,1148 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-overflow-scrolling: auto;
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  /* width: 0px;
+  height: 0px;
+  border-left: 0;
+  background: rgba(0,0,0,0.1); */
+}
+
+::-webkit-scrollbar-thumb {
+  /*background: rgba(0,0,0,0.4);*/
+  /* border-radius: 0 */
+}
+
+.mainPage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 682px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 35px);
+  /* height: 100vh; */
+  min-height: 682px;
+  overflow: hidden;
+  /*background-color: #000;*/
+}
+
+body {
+  width: 100%;
+  min-height: 680px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.topBar {
+  /*background-color: #00bcd4;*/
+  /* background-image: -webkit-linear-gradient(top, #bde1f4, #50b8f4); */
+  background-image: -webkit-linear-gradient(top, #1b1b1b, #353535);
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  /* padding-left: 10px; */
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 2px solid #aaa;
+  cursor: pointer;
+}
+
+.topTitle {
+  width: 100%;
+}
+.mainContent {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* width: calc(100% - 60px); */
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+/* .viewContainer {
+  flex: 1 1;
+}
+.viewControl {
+  height: 30px;
+  background: -webkit-linear-gradient(top, #1b1b1b, #353535);
+} */
+.viewControl {
+  display: inline-block;
+}
+.viewControl .ant-select-selection--single {
+  height: 22px;
+}
+.viewControl .ant-select-selection__rendered {
+  line-height: 22px
+}
+.viewControl .ant-select-selection {
+  background-color: transparent;
+  color: #fff;
+  border-radius: 0;
+  border: 1px solid #fff;
+  margin-right: 20px;
+}
+.viewControl .ant-select-arrow {
+  color: #fff;
+}
+.viewControl .ant-select-focused .ant-select-selection,
+.viewControl .ant-select-selection:focus,
+.viewControl .ant-select-selection:hover,
+.viewControl .ant-select-selection:active,
+.viewControl .ant-select-open .ant-select-selection {
+  border-color: #fff;
+  box-shadow: none;
+}
+.viewChange {
+  display: inline-block;
+  font-size: 16px;
+}
+.viewChange img {
+  margin-right: 5px;
+}
+.viewChange .anticon {
+  font-size: 22px;
+  vertical-align: bottom;
+}
+
+
+.VTKContainer {
+  display:flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: space-between;
+  z-index: 1;
+  position: relative;
+}
+
+.VTKcontainerActive {
+  composes: VTKContainer;
+  flex-flow: column wrap-reverse;
+  flex: 1 1 auto;
+}
+
+.viewBase {
+  border: 2px solid #aaa;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #000;
+}
+
+.viewport {
+  composes: viewBase;
+  /* height: calc(50vh - 20px); */
+  height: calc(50vh - 37px);
+  min-height: 320px;
+  /* width: calc(50vw - 31px); */
+  /* width: calc((100%)/3); */
+  width: 50%;
+}
+
+.viewport:nth-child(1) {
+  order: 1;
+}
+
+.viewport:nth-child(2) {
+  order: 2;
+}
+
+.viewport:nth-child(3) {
+  order: 3;
+}
+
+.viewport:nth-child(4) {
+  order: 4;
+}
+/* 左一右三 */
+.viewportSmall {
+  /* height: calc((100vh - 41px)/3); */
+  height: calc((100vh - 76px)/3);
+  width: 30%;
+  min-height: 212px;
+  flex-shrink: 0;
+}
+
+.viewportActive {
+  order: 10;
+  /* height: calc(100vh - 40px); */
+  height: calc(100vh - 75px);
+  /* width: calc((100vw - 61px)*(3/4)); */
+  width: 70%;
+  min-height: 636px;
+  flex-shrink: 0;
+}
+
+/* 二等分 */
+.viewportTwoPoints:nth-child(1) {
+  order: 1;
+}
+.viewportTwoPoints:nth-child(2) {
+  order: 2;
+}
+.viewportTwoPoints {
+  /* height: calc(100vh - 40px); */
+  height: calc(100vh - 75px);
+  /* width: calc((100vw - 59px)*(1/4)); */
+  width: 50%;
+  min-height: 212px;
+  flex-shrink: 0;
+}
+.viewportTwoPointsHide {
+  display: none;
+  /* height: calc(100vh - 40px); */
+  width: calc(100vw - 75px);
+  width: 50%;
+  min-height: 212px;
+  flex-shrink: 0;
+}
+
+/* 上一下三 */
+.viewportOneTop {
+  /* height: calc(50vh - 20px); */
+  height: calc(50vh - 36px);
+  width: 100%;
+  min-height: 212px;
+  flex-shrink: 0;
+}
+.viewportThreeBottom {
+  height: calc(50vh - 39px);
+  width: calc(100%/3);
+  min-height: 212px;
+  flex-shrink: 0;
+}
+/* 放大 */
+.viewportLarge {
+  order: 10;
+  /* height: calc(100vh - 40px); */
+  width: calc(100vw - 75px);
+  width: 100%;
+  min-height: 636px;
+  position: absolute;
+  left: 0;
+  composes: viewBase;
+}
+
+.topTitle .topMenuItem{
+    line-height: 40px;
+    height: 40px;
+    padding: 0 13px;
+    font-size: 20px;
+    /* transform: rotate(90deg); */
+    transition: .38s;
+    transform-origin: 50% 50%;
+
+}
+.topTitle .topMenuItem:hover {
+  background: #000;
+}
+.topTitle .topMenuItemActive{
+    transform: rotate(90deg);
+}
+
+
+.toggleMenu {
+  font-family: RobotoDraft, Roboto, sans-serif;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title img {
+  position:relative;
+  top: -1px;
+  margin-right: 10px;
+}
+
+.toggleMenu span {
+  font-size: 18px;
+  font-family: museo-slab, Georgia, "Times New Roman", Times,serif;
+}
+
+.menu {
+  /* position: absolute;
+  top: 37px;
+  left: -325px;
+  height: 0;
+  width: 60px;
+  background-color: #555; */
+  z-index: 2;
+  color: #111;
+  font-size: 20px;
+  transition: opacity 0.5s;
+  opacity: 1;
+  /*overflow: hidden;*/
+}
+
+.icons_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  z-index: 1;
+  height: 100%;
+}
+
+.buttons {
+  text-align: right;
+  display: flex;
+  width: 20vw;
+  flex: 1;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  padding-left: 10px;
+  margin-left: 5px;
+  composes: fa    from 'font-awesome/css/font-awesome.css';
+  composes: fa-fw from 'font-awesome/css/font-awesome.css';
+}
+
+.resetCameraButton {
+  composes: button;
+  composes: fa-arrows-alt from 'font-awesome/css/font-awesome.css';
+}
+
+.button:hover {
+  color: #000;
+}
+
+.networkIdle {
+  padding-right: 5px;
+  position: relative;
+  top: -1px;
+}
+
+@keyframes redTransition {
+  0% { opacity: 1; }
+  50% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+@keyframes greenTransition {
+  0% { opacity: 1;}
+  50% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+@keyframes blueTransition {
+  0% { opacity: 1; }
+  50% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+.networkActive {
+  padding-right: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.networkActive :global(.pvw_1) {
+  animation: redTransition 0.3s ease infinite;
+}
+
+.networkActive :global(.pvw_2) {
+  animation: greenTransition 0.3s ease infinite;
+  animation-delay: 0.1s;
+}
+
+.networkActive :global(.pvw_3) {
+  animation: blueTransition 0.3s ease infinite;
+  animation-delay: 0.2s;
+}
+
+.viewActions {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  width: 35px;
+  /* height: 100%; */
+  /* background-color: #252525; */
+  /* background: linear-gradient(
+        45deg,
+        rgba(144, 139, 139, .5) 0, rgba(144, 139, 139, .5) 25%, transparent 25%, transparent 50%,
+        rgba(144, 139, 139, .5) 50%, rgba(144, 139, 139, .5) 75%, transparent 75%, transparent
+      ); */
+   background-size: 6px 6px;
+
+}
+
+.viewportSmall .viewActions {
+  width: 25px;
+}
+
+.viewportActive .viewActions,
+.viewportLarge .viewActions {
+  width: 50px;
+}
+
+.viewActions .slider {
+  height: calc(100% - 216px);
+  flex: 1;
+}
+
+.lineDiv {
+  position: absolute;
+  right: 0px;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(
+        45deg,
+        rgba(144, 139, 139, .5) 0, rgba(144, 139, 139, .5) 25%, transparent 25%, transparent 50%,
+        rgba(144, 139, 139, .5) 50%, rgba(144, 139, 139, .5) 75%, transparent 75%, transparent
+      );
+  background-size: 6px 6px;
+}
+
+.lineDiv .minDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 20px;
+    background: #aaa;
+    cursor: pointer
+}
+
+.viewActions .renderBox_2D,
+.viewActions .renderBox_3D {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: #000;
+}
+
+.viewActions ul li {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.viewportSmall .viewActions ul li {
+  width: 25px;
+  height: 25px;
+}
+
+.viewportActive .viewActions ul li,
+.viewportLarge .viewActions ul li {
+  width: 50px;
+  height: 50px;
+}
+
+.viewActions ul.renderBox_2D li.row {
+  position: relative;
+  right: calc((35px * 2) + 3px);
+  width: calc((35px * 3) + 3px);
+  margin-bottom: 0;
+}
+
+.viewActions ul.renderBox_3D li.row {
+  position: relative;
+  right: calc((35px * 4) + 5px);
+  width: calc((35px * 5) + 5px);
+  margin-bottom: 0;
+}
+
+.viewportSmall .viewActions ul.renderBox_2D li.row {
+  right: calc((25px * 2) + 3px);
+  width: calc((25px * 3) + 3px);
+}
+
+.viewportSmall .viewActions ul.renderBox_3D li.row {
+  right: calc((25px * 4) + 5px);
+  width: calc((25px * 5) + 5px);
+}
+
+.viewportActive .viewActions ul.renderBox_2D li.row,
+.viewportLarge .viewActions ul.renderBox_2D li.row {
+  right: calc((50px * 2) + 3px);
+  width: calc((50px * 3) + 3px);
+}
+
+.viewportActive .viewActions ul.renderBox_3D li.row,
+.viewportLarge .viewActions ul.renderBox_3D li.row {
+  right: calc((50px * 4) + 5px);
+  width: calc((50px * 5) + 5px);
+}
+
+.viewActions ul li.row .viewbutton {
+  float: right;
+  margin-left: 1px;
+}
+
+.viewbutton {
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+}
+
+.viewportSmall .viewbutton {
+  width: 25px;
+  height: 25px;
+  background-size: 25px 25px;
+}
+
+.viewportActive .viewbutton,
+.viewportLarge .viewbutton {
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+}
+
+.viewbutton:hover {
+  opacity: 1;
+}
+
+.DelMeasure {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/2d10.png')
+}
+
+.DelMeasure:active {
+  background-image: url('../images/ViewIcon/2d10a.png')
+}
+
+.FullScreen {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/2d9.png');
+}
+
+.FullScreenActive {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/2d9a.png');
+}
+
+.FullScreen:active {
+  background-image: url('../images/ViewIcon/2d9a.png');
+}
+
+.FullScreenActive:active {
+  background-image: url('../images/ViewIcon/2d9.png');
+}
+
+.ScreenShot {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/2d8.png');
+}
+
+.ScreenShot:active {
+  background-image: url('../images/ViewIcon/2d8a.png');
+}
+
+.ResetCamera {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 0;
+  background-image: url('../images/ViewIcon/2d7.png');
+}
+
+.ResetCamera:active {
+  background-image: url('../images/ViewIcon/2d7a.png');
+}
+
+.ResetWindow {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/2d6.png');
+}
+
+.ResetWindow:active {
+  background-image: url('../images/ViewIcon/2d6a.png');
+}
+
+.WindowCross {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/2d5.png');
+}
+
+.WindowCross:active {
+  background-image: url('../images/ViewIcon/2d5a.png');
+}
+
+.WindowInit {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 2;
+  background-image: url('../images/ViewIcon/2d2.png');
+}
+
+.WindowInit:active {
+  background-image: url('../images/ViewIcon/2d2a.png');
+}
+
+.LeftButton {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 1;
+  background-image: url('../images/ViewIcon/2d3.png');
+}
+
+.LeftButton:active {
+  background-image: url('../images/ViewIcon/2d3a.png');
+}
+
+.TextShow {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 0;
+  background-image: url('../images/ViewIcon/2d4.png');
+}
+/* 关照 */
+.Observation {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 2;
+  background-image: url('../images/ViewIcon/switchT.png');
+}
+
+.Observation:active {
+  background-image: url('../images/ViewIcon/switchL.png');
+}
+
+.Stereoscopic {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/3d12.png');
+}
+
+.Stereoscopic:active {
+  background-image: url('../images/ViewIcon/3d12a.png');
+}
+
+.Slice {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/3d9.png');
+}
+
+.Slice:active {
+  background-image: url('../images/ViewIcon/3d9a.png');
+}
+
+.BgColor {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/3d8.png');
+}
+
+.BgColor:active {
+  background-image: url('../images/ViewIcon/3d8a.png');
+}
+
+.VolumeRender {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 3;
+  background-image: url('../images/ViewIcon/3d2.png');
+}
+
+.VolumeRender:active {
+  background-image: url('../images/ViewIcon/3d2a.png');
+}
+
+.InterestArea {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  background-image: url('../images/ViewIcon/3d3.png');
+}
+
+.InterestArea:active {
+  background-image: url('../images/ViewIcon/3d3a.png');
+}
+
+.SliceShow {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 2;
+  background-image: url('../images/ViewIcon/3d4.png');
+}
+
+.viewVR_container .viewButtons {
+  position: absolute;
+  bottom: -1em;
+  right: 334px;
+}
+
+.SliceShow:active {
+  background-image: url('../images/ViewIcon/3d4a.png');
+}
+
+.StandardView {
+  composes: viewbutton;
+  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  display: block;
+  font-size: 0;
+  background-size: 35px 35px;
+  position: relative;
+  z-index: 1;
+  background-image: url('../images/ViewIcon/3d5.png');
+}
+
+.StandardView:active {
+  background-image: url('../images/ViewIcon/3d5a.png');
+}
+
+.VolumeCalculator {
+  z-index: 1;
+  position: absolute;
+  background-color: #000;
+}
+
+.VolumeCalculator table {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.VolumeCalculator table th {
+  background-color: #ddd;
+  color: #000;
+}
+
+.VolumeCalculator table tr:hover {
+  background-color: #777;
+}
+
+.VolumeCalculator table th,
+.VolumeCalculator table td {
+  border: 1px solid #fff;
+  padding: 4px;
+}
+
+.AreaCalculator {
+  z-index: 1;
+  position: fixed;
+  width: auto;
+  margin-left: -15px;
+  margin-top: 15px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.AreaCalculator:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #efefef;
+}
+
+.AreaCalculator p {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.acceleBox{
+  width: 438px;
+  height: auto;
+  max-height: 60%;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.40);
+  position: fixed;
+  left: 28%;
+  top: 41%;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.accelemask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 19;
+}
+
+.acceletitle {
+    padding: 8px 0;
+    text-align: center;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px 5px 0 0;
+    font-size: 18px;
+    background-color: #fff;
+    color: black;
+    position: relative;
+    z-index: 2;
+}
+
+.accelecontent {
+    width: 100%;
+    height: auto;
+    color: gray;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.accelelinePart {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    color: black;
+    line-height: 34px;
+    text-align: left;
+}
+
+.accelelinePart span {
+    display: inline-block;
+    width: 75px;
+}
+
+.accelebtns {
+    height: 35px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.accelebtns .btn {
+    float: left;
+    width: 30%;
+    margin: 5px 10%;
+    height: 30px;
+    line-height: 28px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+.accelebtns .btn1 {
+    float: left;
+    width: 30%;
+    margin: 5px 10%;
+    height: 30px;
+    line-height: 28px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 240, 0.2);
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: #44a1f3;
+    color: white;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background: #227699!important;
+}
+
+.viewVR {
+
+  /* padding: 20px 20px 20px 0; */
+}
+.viewVR_topBar {
+  background-color: #252525;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  /* padding-right: 20px; */
+  border-bottom:1px solid #fff;
+}
+.viewVR_title {
+  line-height: 40px;
+  float: left;
+}
+.viewVR_topBar .viewVR_close {
+  float: right;
+  font-size: 20px;
+  line-height: 40px;
+  width: 50px;
+  text-align: center;
+}
+.viewVR_container {
+  background-color:#252525;
+  height: calc(100% - 39px);
+  width: 100%;
+  position:relative;
+  color: #fff;
+}
+.viewVR_VR {
+  width: calc(100% - 300px);
+  height: 100%;
+  position: absolute;
+}
+
+.volumeView {
+  /* padding: 20px; */
+  font-size: 16px;
+  line-height: 40px;
+  /* padding-left: 40px; */
+}
+.viewVR_dot {
+  position: absolute;
+  top: 50%;
+  right: 310px;
+  width: 12px;
+  height: 30px;
+}
+
+.viewVR_dot li{
+  list-style: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #999;
+  margin: 1px 0;
+}
+/* .viewVR_footer {
+  background-color: #c6c6c6;
+  height: 40px;
+  width: 100%;
+} */
+
+
+.modalStyle .ant-modal-content{
+  background: #454545;
+  border: 1px solid #666;
+  color: #fff;
+  border-radius:0px;
+}
+
+.modalStyle .ant-modal-header {
+  height: 40px;
+  padding: 8px 12px;
+  background: #666;
+  border-bottom: none;
+  border-radius: 0;
+}
+
+.modalStyle .ant-modal-title {
+  color: #fff;
+}
+.modalStyle .ant-modal-close-x {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+.modalStyle .ant-modal-body {
+  padding: 12px 24px;
+}
+.modalStyle .ant-modal-footer {
+  border-top: none;
+}
+/* .modalStyle .ant-btn-primary, */
+.modalStyle .ant-btn
+ {
+  display:inline-block;
+  width: 20%;
+  margin: 5px 10%;
+  height: 25px;
+  line-height: 23px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  background: #666;
+  /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000)); */
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0;
+}
+.modalStyle .ant-btn:hover{
+  background: #454545!important;
+  border-color: #fff;
+  color: #fff;
+}
+
+.modalStyle .ant-modal-footer div {
+  text-align: center;
+}
+
+.warining .ant-modal-content{
+  width: 350px;
+}
+.warning .ant-btn {
+  display: none;
+}
+
+
+/* .warning .ant-modal-content{
+  background: #252525;
+  width: 350px;
+  border: 1px solid #4da6da;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.warning .ant-modal-header {
+  height: 40px;
+  padding: 8px 12px;
+  background: #4da6da;
+  border-bottom: none;
+}
+
+.warning .ant-modal-title {
+  color: #fff;
+}
+.warning .ant-modal-close-x {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+.warning .ant-modal-body {
+  padding: 12px 24px;
+}
+.warning .ant-modal-footer {
+  border-top: none;
+}
+.warning .ant-btn {
+  display: none;
+}
+.warning .ant-btn-primary {
+  display:inline-block;
+  width: 30%;
+  margin: 5px 10%;
+  height: 25px;
+  line-height: 23px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+  color: #fff;
+  cursor: pointer;
+}
+.warning .ant-btn-primary:hover{
+  background: #2276a2!important;
+}
+
+.warning .ant-modal-footer div {
+  text-align: center;
+} */

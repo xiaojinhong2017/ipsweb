@@ -1,0 +1,851 @@
+*{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+.RightControlContainer{
+  background: #252525;
+  border-top: 2px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 表格 */
+.tableBox{
+  width: 400px;
+  height: 181px;
+  overflow: scroll;
+}
+
+.itemPanel {
+  width: 400px;
+  height: 203px;
+  border-top: 4px solid #484948;
+}
+
+.itemPanel th{
+  font-size: 14px;
+  color: white;
+  height: 22px;
+  text-align: center;
+  background: #777777;
+}
+
+.itemPanel td{
+  height: 24px;
+  font-size: 14px;
+  text-align: center;
+  background: #777777;
+}
+
+.selectPanel{
+  width: 400px;
+  height: 35px;
+  background: #5c5c5c;
+}
+
+.selectPanel form {
+  line-height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  overflow: hidden;
+}
+
+.selectPanel form select{
+  flex: 1;
+  margin: 5px 0 5px 10px;
+}
+
+/* 工具栏 */
+.expand {
+  padding-top: 10px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  composes: fa    from 'font-awesome/css/font-awesome.css';
+  composes: fa-bars from 'font-awesome/css/font-awesome.css';
+}
+
+.expandActive {
+  padding-top: 10px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  composes: expand;
+  color: #4bacff;
+}
+
+.toolPanel {
+  display: flex;
+  color: #fff;
+  flex: 1;
+}
+
+.toolLabelBox {
+  /* width: 40px; */
+  order: 2;
+  /* padding: 0 8px; */
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #000;
+  border-left: 2px solid #aaa;
+}
+
+.expandButton,
+.drapDown {
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  background: #666;
+}
+.toolLabelBox .ant-menu::-webkit-scrollbar {
+  display: none;
+}
+.toolLabelBox .ant-menu-dark.ant-menu-inline .ant-menu-item {
+  height: auto;
+  line-height: 20px;
+  padding: 4px 0;
+  margin: 0;
+  border-bottom: 1px solid #666;
+}
+.toolLabelBox .ant-menu-item,
+.toolLabelBox .ant-menu-submenu-title {
+  white-space: normal;
+}
+
+.toolLabelBox .ant-menu-dark.ant-menu-inline {
+  /* height: calc(100vh - 122px); */
+  height: calc(100vh - 157px);
+  overflow-y: auto;
+
+}
+.toolLabelBox .ant-menu-root {
+ background: #000;
+}
+.toolLabelBox .ant-menu.ant-menu-dark .ant-menu-item-selected,
+.toolLabelBox .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background: #4c4b4b;
+}
+.toolLabelBox .ant-menu-inline-collapsed > .ant-menu-item,
+.toolLabelBox .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+.toolLabelBox .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title,
+.toolLabelBox .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding:0 21px!important;
+}
+
+.toolLabelBox .ant-menu-inline .ant-menu-item {
+   padding: 0;
+ }
+.toolLabelBox  .ant-menu-item .anticon {
+  margin-right: 3px;
+}
+.toolLabel {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
+.toolLabelActive {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+  /* composes: toolLabel; */
+  color: #4bacff;
+  position: relative;
+}
+
+.toolLabelActive::after {
+  height: 94%;
+  width: 2px;
+  content: '';
+  background-color: #4bacff;
+  position: absolute;
+  top: 3%;
+  right: -8px;
+}
+
+.toolContainer {
+  flex: 1;
+}
+
+.toolContainerHide {
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.toolContainer ul {
+  padding: 10px 0 10px 34px;
+  margin: 0;
+  list-style: none;
+}
+
+/* common */
+.functionWrapper {
+  width: 368px;
+  position: absolute;
+  top: 0;
+  border-top: 2px solid #1386ff;
+  border-bottom: 2px solid #1386ff;
+  background-color: #535353;
+  line-height: 1.5;
+  text-align: justify;
+  height: calc(100%);
+}
+
+.functionWrapper:before {
+  content: '';
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 100%;
+  height: 140px;
+}
+
+.functionWrapper2D{
+  width: 360px;
+  position: absolute;
+  left: -32px;
+  top: -132px;
+  border-top: 2px solid #1386ff;
+  border-bottom: 2px solid #1386ff;
+  background-color: #535353;
+  text-align: justify;
+  z-index: 1;
+  height: 907px;
+}
+
+.functionWrapper2DEXT{
+  width: 360px;
+  position: absolute;
+  left: -132px;
+  top: -132px;
+  border-top: 2px solid #1386ff;
+  border-bottom: 2px solid #1386ff;
+  background-color: #535353;
+  text-align: justify;
+  z-index: 1;
+  height: 907px;
+}
+
+.functionWrapper2DEDIT{
+  width: 360px;
+  position: absolute;
+  left: -135px;
+  top: -252px;
+  border-top: 2px solid #1386ff;
+  border-bottom: 2px solid #1386ff;
+  background-color: #535353;
+  text-align: justify;
+  z-index: 1;
+  height: 907px;
+}
+
+.functionWrapper2DREM{
+  width: 360px;
+  position: absolute;
+  left: -234px;
+  top: -132px;
+  border-top: 2px solid #1386ff;
+  border-bottom: 2px solid #1386ff;
+  background-color: #535353;
+  text-align: justify;
+  z-index: 1;
+  height: 907px;
+}
+
+.functionWrapper2DAI{
+  width: 360px;
+  position: absolute;
+  left: -34px;
+  top: -490px;
+  border-top: 2px solid #1386ff;
+  border-bottom: 2px solid #1386ff;
+  background-color: #535353;
+  text-align: justify;
+  z-index: 1;
+  height: 907px;
+}
+
+.spanText{
+  display: inline-block;
+  font-style: normal;
+  position: static;
+  width:60px;
+  line-height: 24px;
+}
+
+.spanText2{
+  display: inline-block;
+  font-style: normal;
+  position: static;
+  width:100px;
+  line-height: 24px;
+}
+
+.spanText3{
+  display: inline-block;
+  font-style: normal;
+  position: static;
+  width:120px;
+  line-height: 24px;
+}
+
+.spanText4{
+  display: inline-block;
+  font-style: normal;
+  position: static;
+  width: 70px;
+  line-height: 24px;
+}
+
+.SimulatedList{
+  position:relative;
+  width: 315px;
+}
+
+.colorIcon1 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 255, 0, 1);
+    margin-right: 10px;
+}
+
+.colorIcon2 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 255, 255, 1);
+    margin-right: 10px;
+}
+
+.colorIcon3 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 0, 255, 1);
+    margin-right: 10px;
+}
+.colorIcon4 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 0, 1);
+    margin-right: 10px;
+}
+.colorIcon7 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 127, 0, 1);
+    margin-right: 10px;
+}
+.colorIcon6 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 255, 1);
+    margin-right: 10px;
+}
+.colorIcon5 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 0, 0, 1);
+    margin-right: 10px;
+}
+.colorIcon8 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(183, 143, 105, 1);
+    margin-right: 10px;
+}
+.colorIcon9 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(69, 115, 64, 1);
+    margin-right: 10px;
+}
+.colorIcon10 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(77, 77, 143, 1);
+    margin-right: 10px;
+}
+.colorIcon11 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(166, 97, 112, 1);
+    margin-right: 10px;
+}
+.colorIcon12 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 1);
+    margin-right: 10px;
+}
+
+.rowPart {
+  padding: 8px 10px;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.rowPart span,
+.rowPart select {
+  width: 120px;
+  display: inline-block;
+}
+
+.rowPart .btn {
+  float: left;
+  padding: 5px 10px;
+  margin-right: 15px;
+  min-width: 103px;
+  font-size: 12px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+  cursor: pointer;
+}
+
+.rowPart .btn2 {
+  width: 190px;
+  text-align: center;
+  float: left;
+  padding: 5px 10px;
+  margin: 0 auto;
+  min-width: 103px;
+  font-size: 12px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+  cursor: pointer;
+}
+
+.rowPart .btn4 {
+  width: 190px;
+  text-align: center;
+  float: left;
+  padding: 5px 10px;
+  margin-left: 83px;
+  min-width: 103px;
+  font-size: 12px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+  cursor: pointer;
+}
+
+.rowPart .btn3 {
+  width: 166px;
+  overflow: hidden;
+  text-align: left;
+  float: left;
+  padding: 5px 10px;
+  margin-left: 14px;
+  min-width: 103px;
+  font-size: 12px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+  cursor: pointer;
+}
+
+.rowPart .btn3 i {
+  font-style: normal;
+}
+
+.rowPart .disable {
+  float: left;
+  padding: 5px 10px;
+  margin-right: 15px;
+  min-width: 103px;
+  font-size: 12px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  background: #646464;
+  cursor: pointer;
+}
+
+.rowPart .btn:nth-last-child(1) {
+  margin: 0;
+}
+
+.rowPart .btn:hover {
+  background: #1b95e5;
+}
+
+.rowPart .btn:active {
+  background: #2068a0;
+}
+
+.rowPart .btnActive {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#19a6ff), to(#23486f))!important;
+}
+
+.rowPart .btn2:hover {
+  background: #1b95e5;
+}
+
+.rowPart .btn2:active {
+  background: #2068a0;
+}
+
+.rowPart .btn4:hover {
+  background: #1b95e5;
+}
+
+.rowPart .btn4:active {
+  background: #2068a0;
+}
+
+.rowPart .btn3:hover {
+  background: #1b95e5;
+}
+
+.rowPart .btn3:active {
+  background: #2068a0;
+}
+
+.liverSegment {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.displayNo{
+  display: none;
+}
+
+/* messageContent */
+.messageContent {
+  width: 350px;
+  height: auto;
+  max-height: 60%;
+  border-radius: 4px;
+  border: 1px solid #4da6da;
+  position: fixed;
+  z-index: 1;
+  font-size: 14px;
+  left: calc(50% - 175px);
+  top: 25%;
+  z-index: 50;
+}
+
+.messageContent i {
+  width: auto;
+  padding-left: 10px;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.title {
+  padding: 5px 8px;
+  height: 28px;
+  /* background-color: #35B4FF; */
+  line-height: 28px;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.title span {
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    padding-bottom: 8px;
+    background-color: #252525;
+    position: relative;
+    z-index: 2;
+}
+
+.content .rowPart {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    color: #fff;
+    line-height: 25px;
+    text-align: left;
+}
+
+.content .rowPart span {
+    display: inline-block;
+    width: 75px;
+}
+
+.btns {
+    height: 35px;
+    text-align: center;
+}
+
+.btns .btn {
+    float: left;
+    width: 30%;
+    margin: 5px 10%;
+    height: 25px;
+    line-height: 23px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#000));
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 肝分段 */
+.liverButton {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  margin-left: 5px;
+  margin-bottom: 60px;
+  position: relative;
+  top: -15px;
+  background-image: url('../images/Function/LiverSections1.png');
+}
+
+.liverButtonActive {
+  composes: liverButton;
+  background-image: url('../images/Function/LiverSections3.png');
+}
+
+.seedButton {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  margin-left: 5px;
+  position: relative;
+  top: -10px;
+  background-image: url('../images/Function/3DSeedN.png');
+}
+
+.seedButtonActive {
+  composes: seedButton;
+  background-image: url('../images/Function/3DSeedH.png');
+}
+
+/* input[type=radio] {
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+} */
+
+.radioPart {
+  width: 85px;
+}
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.rowPart input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox label {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border: 2px solid #333;
+  position: relative;
+  display: inline-block;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.checkbox label:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  z-index: 2;
+  background: #555;
+  box-shadow: none;
+  top: 2px;
+  left: 2px;
+  transition: 0.4s;
+}
+
+.checkbox input:checked + label {
+  border-color: #24d646;
+}
+
+.checkbox input:checked + label:after {
+  background: #24d646;
+  left: 22px;
+}
+
+.pipeStructure{
+  cursor: pointer;
+  margin-right: 5px;
+  width: 160px;
+  height: 30px;
+  margin-top: 15px;
+  background: #36383c;
+}
+
+.pipeStructure label{
+  font-size: 15px;
+}
+
+.pipeStructure .checkboxName{
+  display: inline-block;
+  line-height: 22px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.pipeStructure .checkboxNameActive{
+  display: inline-block;
+  color: orange;
+  line-height: 22px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.pipeStructure .checkedBox{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 10px;
+  background: url('../images/ToolIcon/checked.png') no-repeat;
+  background-size: 16px 16px;
+}
+
+.pipeStructure .uncheckedBox{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 10px;
+  background: url('../images/ToolIcon/uncheck.png') no-repeat;
+  background-size: 16px 16px;
+}
+/* 右侧下拉框样式 */
+.functionWrapper .ant-select-selection {
+  border-radius: 0;
+}
+.functionWrapper .ant-select-selection--single {
+  height: 24px;
+}
+.functionWrapper .ant-select-selection-selected-value,
+.functionWrapper .ant-select-selection__rendered {
+  line-height: 24px;
+}
+
+.rowPart .ant-select-arrow {
+  width: 16px;
+}
+
+.functionWrapper .ant-checkbox-wrapper,
+.functionWrapper .ant-radio-wrapper {
+  color:#fff;
+}
+.rowPart  label{
+  margin-right: 20px;
+}
+.inlinePart {
+  display: inline-block;
+}
+.inlinePart label {
+  display: block;
+}
+
+.rowPart .ant-checkbox-wrapper span {
+  width: auto;
+}
+
+.rowPart .ant-checkbox-wrapper .ant-checkbox,
+.rowPart .ant-checkbox-wrapper .ant-checkbox-inner {
+  width: 16px;
+}
+.functionWrapper .ant-slider-rail,
+.functionWrapper .ant-slider-track,
+.functionWrapper .ant-slider-handle {
+  height: 160px;
+}
+.functionWrapper .ant-slider {
+  height: 160px;
+  width: 100%;
+  margin: 0px 6px 30px;
+}
+.functionWrapper .ant-slider-handle {
+  height: 160px;
+  margin-top: 0px;
+  border-radius: 0%;
+  width: 2px;
+  border: solid 1px #181c1f;
+}
+.functionWrapper .ant-slider .ant-slider-dot {
+  display: none;
+}
+.functionWrapper .ant-slider-mark {
+  bottom: -3px;
+  top: auto;
+}
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+  border-color: #69c0ff;
+}
+.functionWrapper .ant-input-number-handler {
+  width: 20px;
+}
+.functionWrapper .ant-input-number {
+  width: 70px;
+  border-radius: 0;
+}
+.functionWrapper .ant-input-number-handler-wrap span {
+  display: block;
+}

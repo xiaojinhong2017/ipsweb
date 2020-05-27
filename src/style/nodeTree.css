@@ -1,0 +1,339 @@
+.nodeTree{
+  position: relative;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  display: none;
+}
+
+  /* .nodeBtn{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left:5px;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    appearance: none;
+    border: none;
+  }
+  .nodeBtn img{
+    width: 20px;
+    height: 20px;
+    display: block;
+    overflow: hidden;
+  }
+  .showHead{
+    overflow: hidden;
+    margin:0 2px;
+  }
+  .showHead img{
+    width: 12px;
+    height:12px;
+    line-height: 12px;
+    display:block;
+    overflow: hidden;
+    position: relative;
+    z-index:2;
+  }
+  .nodeWrap{
+    width:auto;
+    height:500px;
+    position:absolute;
+    top:20px;
+    left:5px;
+    z-index: 9;
+    transition:height 1s ;
+  }
+  .nodeList{
+    width:auto;
+    height:300px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+  }
+
+  .list{
+    width: 250px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .listActive{
+    width: 250px;
+    height: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left:2px!important ;
+    border: thin solid #efefef;
+  }
+  .setColor{
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index:2;
+
+  }
+  .getText{
+    width:130px;
+    overflow: hidden;
+    font-size: 12px!important;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  .getVolume{
+    width:50px;
+    text-align: end;
+    font-size: 12px!important;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+    top:-1;
+    left:155px;
+  } */
+  /* 修改antd 样式 */
+  /* .ant-tree.ant-tree-show-line.hide-file-icon li span.ant-tree-switcher-noop {
+    background: transparent;
+  }
+
+  .ant-tree.ant-tree-show-line.hide-file-icon li .ant-tree-switcher-noop > i {
+    visibility: hidden;
+  } */
+
+  /* .ant-tree.ant-tree-show-line.hide-file-icon li .ant-tree-switcher-noop:after {
+    content: " ";
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    width: 10px;
+    position: absolute;
+    left:10px;
+    top: 70%;
+    margin: 0;
+  }  */
+  /* .ant-tree.ant-tree-show-line.hide-file-icon li:before {
+    content: " ";
+    width: 1px;
+    border-left: 1px solid #d9d9d9;
+    height: 80%;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    margin: 0;
+  } */
+  /* .ant-tree.ant-tree-show-line.hide-file-icon li:first-child:before {
+    top: 6px;
+    height: calc(100% - 6px);
+  } */
+
+  /* /// */
+  /* .ant-tree-child-tree.ant-tree-child-tree-open li:after{
+    content: " ";
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    width: 6px;
+    position: absolute;
+    left:0;
+    top: 70%;
+    margin: 0;
+  } */
+  /* .ant-tree.ant-tree-show-line li:not(:last-child)::before {
+      position: absolute;
+      left: 12px;
+      width: 1px;
+      height: 100%;
+      height: calc(100% - 29px)!important;
+      margin: 20px 0 0!important;
+      border-left: 0px solid #d9d9d9!important;
+      content: ' ';
+  } */
+  /* .ant-tree.ant-tree-show-line.hide-file-icon li:last-child:before {
+    height: 16px;
+  }
+  .ant-tree.ant-tree-show-line.hide-file-icon li:first-child:last-child:before {
+    height: 10px;
+  } */
+
+  /* .ant-tree-switcher{
+    background-color: transparent!important;
+  }
+  .ant-tree-treenode-switcher-close{
+    background-color: transparent!important;
+  }
+  .ant-tree-node-content-wrapper .ant-tree-node-content-wrapper-close{
+    background-color: transparent!important;
+  }
+  .ant-tree.ant-tree-show-line li:not(:last-child)::before {
+    position: absolute;
+    left: 8px!important;
+    padding-left: 15px;
+  }
+
+  .ant-tree li ul{
+    margin: 0;
+    padding: 0 0 0 6px!important;
+    box-sizing: border-box!important;
+  }
+  .ant-tree-switcher {
+    height: 16px!important;
+    width: 16px!important;
+    background:none!important;
+  }
+
+  .ant-tree-switcher,
+  .ant-tree-switcher-noop{
+    box-sizing: border-box;
+    transform: translateY(0px)!important;
+  }
+  .ant-tree-node-content-wrapper
+  .ant-tree-node-content-wrapper-normal{
+    padding: 4px 0!important;
+    box-sizing: border-box;
+  }
+
+  .ant-tree>li .ant-tree-node-content-wrapper{
+    vertical-align: middle!important;
+  }
+  .ant-tree-node-content-wrapper{
+    height: 15px!important;
+    background:none!important;
+    box-sizing: border-box!important;
+  }
+
+  .ant-tree-treenode-switcher-open >.ant-tree-child-tree {
+    padding-top:0px!important ;
+    padding-left: 10px!important;
+    box-sizing: border-box!important;
+  }
+  .ant-tree-node-content-wrapper ,
+  .ant-tree-node-content-wrapper-close{
+    padding: 1.5px 0 !important;
+    margin: 0!important;
+    box-sizing: border-box!important;
+  }
+  .ant-tree-child-tree .ant-tree-child-tree-open{
+    padding-top:0px!important ;
+    padding-left:10px!important;
+    box-sizing: border-box!important;
+  }
+  .ant-tree-child-tree .ant-tree-child-tree-open > .ant-tree-treenode-switcher-open{
+    padding-top:0px!important ;
+    box-sizing: border-box!important;
+
+  }
+  .ant-tree .nodeList .ant-tree-icon-hide>.ant-tree-treenode-switcher-open{
+    padding-top:0px!important ;
+    box-sizing: border-box!important;
+
+  }
+  .ant-tree-treenode-switcher-open >ul>.ant-tree-treenode-switcher-open{
+    padding-top:0px!important ;
+    box-sizing: border-box!important;
+  }
+  .ant-tree-treenode-switcher-close{
+    margin:0px!important ;
+    line-height: 13px!important
+  }
+  .ant-tree-node-content-wrapper-close{
+    height: 15px!important;
+    background:none!important;
+    padding: 1.5px 0!important;
+    box-sizing: border-box!important;
+
+  }
+  .ant-tree>li{
+    padding: 2px 0 !important;
+    box-sizing: border-box!important;
+  }
+  .ant-tree .nodeList .ant-tree-icon-hide >li{
+    height: 15px!important;
+    padding: 2px 0px!important;
+    box-sizing: border-box!important;
+  }
+
+  .ant-tree .nodeList .ant-tree-icon-hide >li.ant-tree-treenode-switcher-open{
+    padding-top:0px!important ;
+    box-sizing: border-box!important;
+  } */
+  /* 弹框样式 */
+
+  /* .Popout{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background:rgba(255,255,255);
+    position: absolute;
+    top:-8px;
+    left:100px;
+    z-index: 99;
+  }
+  .Popout::before{
+    content:"";
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-color: transparent  rgba(255,255,255) transparent transparent ;
+    position: absolute;
+    top:9px;
+    left: -14px;
+  }
+  .popWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .opacity,.backColor{
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .opacityImg{
+    width: 25px;
+    height: 25px;
+    display: block;
+  }
+  .colorImg{
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  .backColor{
+    position: relative;
+  }
+  .getColor{
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+    border: thin solid #777;
+  }
+
+  .backgroundMark{
+    width: 210px;
+    height: 18px;
+    background: rgba(57, 234, 115,0.5);
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+
+ */
